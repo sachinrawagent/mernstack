@@ -69,7 +69,7 @@ const ResponsiveAppBar = () => {
             variant="h6"
             noWrap
             component="div"
-            sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
+            sx={{ ml:4, display: { xs: "none", md: "flex" } }}
             onClick={() => navigate("/flatregister")}
           >
             Flat Register
