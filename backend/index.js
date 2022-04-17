@@ -24,7 +24,7 @@ app.get("/byflattype/:name", byflattype)
 
 
 
-app.listen(8080, async () => {
+app.listen(process.env.PORT || 8080, async () => {
     try {
         await connect()
         console.log("server is running on port 8080");

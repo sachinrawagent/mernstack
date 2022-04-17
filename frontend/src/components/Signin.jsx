@@ -51,7 +51,7 @@ export default function SignIn() {
     };
 
     axios
-      .post("http://localhost:8080/login", payload)
+      .post("https://apartment-manager-mernstack.herokuapp.com/login", payload)
       .then((res) => {
         alert("Login successfully");
         localStorage.setItem("token", res.data.token);

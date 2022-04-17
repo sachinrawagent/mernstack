@@ -48,7 +48,7 @@ export default function SignUp() {
     };
 
     axios
-      .post("http://localhost:8080/register", payload)
+      .post("https://apartment-manager-mernstack.herokuapp.com/register", payload)
       .then((res) => {
         console.log(res.data.user);
         alert("User created successfully");

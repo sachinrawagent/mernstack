@@ -48,7 +48,7 @@ export default function FlatRegistration() {
     };
     console.log(payload);
     axios
-      .post("http://localhost:8080/flatregister", payload)
+      .post("https://apartment-manager-mernstack.herokuapp.com/flatregister", payload)
       .then((res) => {
         console.log(res);
         alert("Flat created successfully");
@@ -66,7 +66,7 @@ export default function FlatRegistration() {
     };
 
     axios
-      .post("http://localhost:8080/residents", payload)
+      .post("https://apartment-manager-mernstack.herokuapp.com/residents", payload)
       .then((res) => {
         console.log(res.data.response);
         localStorage.setItem(

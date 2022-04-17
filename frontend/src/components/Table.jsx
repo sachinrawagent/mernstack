@@ -63,7 +63,7 @@ export default function ViewTable() {
 
   const handlePagination = () => {
     axios
-      .get(`http://localhost:8080/getFlatspagination?page=${count}&limit=3`)
+      .get(`https://apartment-manager-mernstack.herokuapp.com/getFlatspagination?page=${count}&limit=3`)
       .then((response) => {
         console.log(response.data);
         setTableData(response.data.pageData);
@@ -75,7 +75,7 @@ export default function ViewTable() {
 
   const handleHighSort = () => {
     axios
-      .get(`http://localhost:8080/highsortedflat`)
+      .get(`https://apartment-manager-mernstack.herokuapp.com/highsortedflat`)
       .then((response) => {
         console.log(response.data);
         setTableData(response.data);
@@ -86,7 +86,7 @@ export default function ViewTable() {
   };
   const handlelowSort = () => {
     axios
-      .get(`http://localhost:8080/lowsortedflat`)
+      .get(`https://apartment-manager-mernstack.herokuapp.com/lowsortedflat`)
       .then((response) => {
         console.log(response.data);
         setTableData(response.data);
@@ -98,7 +98,7 @@ export default function ViewTable() {
   const handleSubmitBlock = (e) => {
     e.preventDefault();
     axios
-      .get(`http://localhost:8080/blockname/${e.target.block.value}`)
+      .get(`https://apartment-manager-mernstack.herokuapp.com/blockname/${e.target.block.value}`)
       .then((response) => {
         console.log(response.data);
         setTableData(response.data);
@@ -109,7 +109,7 @@ export default function ViewTable() {
   };
   const handleOwnerSort = () => {
     axios
-      .get(`http://localhost:8080/byflattype/Owner`)
+      .get(`https://apartment-manager-mernstack.herokuapp.com/byflattype/Owner`)
       .then((response) => {
         console.log(response.data);
         setTableData(response.data);
@@ -120,7 +120,7 @@ export default function ViewTable() {
   };
   const handleTenantSort = () => {
     axios
-      .get(`http://localhost:8080/byflattype/Tenant`)
+      .get(`https://apartment-manager-mernstack.herokuapp.com/byflattype/Tenant`)
       .then((response) => {
         console.log(response.data);
         setTableData(response.data);
